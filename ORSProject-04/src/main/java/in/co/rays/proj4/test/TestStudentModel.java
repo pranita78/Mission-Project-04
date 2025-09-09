@@ -101,12 +101,10 @@ private static void testlist() throws Exception {
 	}
 
 	public static void testDelete() throws Exception {
-
-		StudentBean bean = new StudentBean();
-		StudentModel model = new StudentModel();
-		//bean.setId(4);
-		model.delete(9);
-		
+	    StudentBean bean = new StudentBean();
+	    bean.setId(5L); // ✅ ID set karo yahan
+	    StudentModel model = new StudentModel();
+	    model.delete(bean); // ✅ Bean pass karo, int nahi
 	}
 
 	public static void testfindByPk() throws Exception {
@@ -136,7 +134,7 @@ private static void testlist() throws Exception {
 	public static void testfindByEmail() throws Exception {
 
 		StudentModel model = new StudentModel();
-		StudentBean bean = model.findByEmail("shashank@gmail.com");
+		StudentBean bean = model.findByEmailId("shashank@gmail.com");
 		if (bean != null) {
 			System.out.println("\t" + bean.getId());
 			System.out.println("\t" + bean.getFirstName());

@@ -19,10 +19,10 @@ public class TestRoleModel {
 	public static void main(String[] args) throws ParseException {
 		// testAdd();
 		//testUpdate();
-		 testDelete();
-		// testfindByPk();
+		// testDelete();
+		 testfindByPk();
 		// testFindByName();
-		 testSearch();
+		// testSearch();
 	}
 
 	public static void testAdd() throws ParseException {

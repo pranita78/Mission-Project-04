@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import in.co.rays.proj4.bean.DropdownListBean;
+import in.co.rays.proj4.model.RoleModel;
 import in.co.rays.proj4.model.UserModel;
 
 public class HTMLUtility {
@@ -73,9 +74,9 @@ public class HTMLUtility {
 
 	public static void testGetListByList() throws Exception {
 
-		// RoleModel model = new RoleModel();
+		RoleModel model = new RoleModel();
 
-		UserModel model = new UserModel();
+	//	UserModel model = new UserModel();
 
 		//List<DropdownListBean> list = null;
 		List list = model.list();
@@ -89,9 +90,9 @@ public class HTMLUtility {
 
 	public static void main(String[] args) throws Exception {
 
-		 //testGetListByMap();
+		 testGetListByMap();
 
-		testGetListByList();
+		//testGetListByList();
 
 	}
 }

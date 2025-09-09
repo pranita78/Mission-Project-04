@@ -1,4 +1,4 @@
-package in.co.rays.proj4.test;
+ package in.co.rays.proj4.test;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -14,9 +14,9 @@ public class TestTimetableModel {
 	public static void main(String[] args) throws Exception {
 //		 testAdd();
 //		 testUpdate();
-//		 testDelete();
+		 testDelete();
 //		 testfindByPk();
-         testsearch();
+     //    testsearch();
 
 	}
 
@@ -63,7 +63,9 @@ public class TestTimetableModel {
 	public static void testDelete() throws Exception {
 
 		TimetableModel model = new TimetableModel();
-		model.delete1(3L);
+		TimetableBean bean = new TimetableBean();
+		bean.setId(2);
+		model.delete(bean);
 	}
 
 	public static void testfindByPk() throws Exception {

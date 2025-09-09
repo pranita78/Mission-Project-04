@@ -1,4 +1,4 @@
-package in.co.rays.proj4.model;
+ package in.co.rays.proj4.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -110,13 +110,13 @@ public class CourseModel {
 		}
 	}
 
-	public void delete(CourseBean bean) throws ApplicationException {
+	public void delete(long deletebean) throws ApplicationException {
 		Connection conn = null;
 		try {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false);
 			PreparedStatement pstmt = conn.prepareStatement("delete from st_course where id = ?");
-			pstmt.setLong(1, bean.getId()); // ✅ Sirf yeh line change ki gayi hai
+			pstmt.setLong(1, deletebean); 
 			pstmt.executeUpdate();
 			conn.commit();
 			pstmt.close();
@@ -250,4 +250,5 @@ public class CourseModel {
 		return list;
 	}
 
+	
 }

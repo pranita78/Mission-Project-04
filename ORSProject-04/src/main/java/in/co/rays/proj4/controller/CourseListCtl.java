@@ -1,4 +1,4 @@
-package in.co.rays.proj4.controller;
+ package in.co.rays.proj4.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -117,7 +117,7 @@ public class CourseListCtl extends BaseCtl {
 					CourseBean deletebean = new CourseBean();
 					for (String id : ids) {
 						deletebean.setId(DataUtility.getInt(id));
-						model.delete(deletebean);
+						model.delete(1);
 						ServletUtility.setSuccessMessage("Course deleted successfully", request);
 					}
 				} else {
